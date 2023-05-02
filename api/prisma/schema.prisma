@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  auth0Id  String   @unique @default("")
+  username String
+}
+
+model Record {
+  id           Int      @id @default(autoincrement())
+  title        String   @db.VarChar(50)
+  content      String   @db.VarChar(1000)
+  likes        Int      @default(0)
+  stars        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  authorId     Int
+}
+
+model Likes {
+  id        Int    @id @default(autoincrement())
+  recordId  Int
+  userId    Int
+  createdAt    DateTime @default(now())
+}
+
+model Stars {
+  id        Int    @id @default(autoincrement())
+  recordId  Int
+  userId    Int
+  createdAt    DateTime @default(now())
+}
