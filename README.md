@@ -1,17 +1,15 @@
-# assignment-03
+# About SmallTalks
 
-Hi! We developed this app where everyone can post/view/like some Elevator Talk Hints. We double-checked that all requirements listed here are met. 
+Hi! This app can help you post/view/like some Elevator Talk Hints. 
+
 * the website is deployed at [here](https://5610-web3-ymtowya.vercel.app/), 
 * and the database is deployed at [here](https://app.planetscale.com/kaigendo/deploy-test),
 * and the service is deployed at [here](https://cs-5610-web-dev.wm.r.appspot.com)
 
+The website met the requirements below.
 ----
 
-You will be working in groups of up to 2 students for this project.
-
 The goal is to develop a "Software as a Service" web application performing CRUD operations based on React, NodeJs and Prisma (Some examples include an online store, food ordering, personal journal, learning management system, social network, ...).
-
-Note: The topic should be different from your application in assignment 2 
 
 Your project must support some functionality for anonymous users and only force users to log in if a user identity is required to fulfill a service. For instance, in an online store, anonymous users should be able to search for products, view product details, read product reviews, etc. If a user would like to bookmark a product, comment on a product, or add a product to a shopping cart, then, and only then, would the website ask the user to identify themselves or register.
 
@@ -75,5 +73,11 @@ Your application should have at least one unit test per page.
 # Database requirements
 Your application should include at least 3 tables in the database.  
 
-# How to launch the backend
+# Install dependencies 
+npm install
+# Launch the backend
 Located in the project directory, run: node api/server.js
+
+# Launch the frontend
+Located in the client folder, run: npm start
+
